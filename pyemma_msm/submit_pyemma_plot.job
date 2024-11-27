@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -c 1 --ntasks-per-node=1 -N 1
+#SBATCH -t 0-12:00:00          
+#SBATCH -J plot_pyemma
+#SBATCH -p seas_compute,kozinsky
+#SBATCH --mem=256000
+#SBATCH -o runout.%x.%j  
+#SBATCH -e runerr.%x.%j  
+
+
+
+
+source /n/home04/mdesco/.bashrc
+ENV_ROOT=/n/holystore01/LABS/kozinsky_lab/Lab/User/mdescoteaux/Software/24_11_15_Pyemma/pyemma_env
+conda activate $ENV_ROOT
+
+python ./pyemma_cktest.py
