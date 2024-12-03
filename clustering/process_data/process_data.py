@@ -11,9 +11,12 @@ def create_xyz(file, start, stop, interval, save_name):
         interval (int): The interval between frames to extract.
         save_name (str): The name of the output XYZ file.
     """
+    # read all frames
     frames = ase.read(file, index=f"{start}:{stop}:{interval}", format="lammps-dump-text")
     for frame in frames:
         frame.symbols = "Li16080S3600P720Cl720" 
+        
+    # write frames to new file
     ase.write(save_name, frames)
     print(save_name)
     print(len(frames))
