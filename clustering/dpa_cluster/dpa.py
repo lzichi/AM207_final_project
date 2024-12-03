@@ -11,21 +11,21 @@ class DensityPeakAdvancedClusteringACE:
 
     def __init__(self, isVerbose):
         """
-        Class for applying density peak advanced (DPA) clustering to atomic cluster expansion (ACE) descriptors
+        Class for applying density peak advanced (DPA) clustering to atomic cluster expansion (ACE) descriptors.
         
         Parameters:
-                isVerbose (bool): Print (or not) helpful statements
+                isVerbose (bool): Print (or not) helpful statements.
         """
         self.isVerbose = isVerbose
 
     def load_data(self, labeled_list_path, ACE_shape):
         """
-        Load the ACE descriptors into an array for DPA clustering
+        Load the ACE descriptors into an array for DPA clustering.
         
         Parameters:
                 labeled_list_path (List[str]): List of strings to paths of .npz files of ACE descs
-                                               the .npz file with key 'ACE' (with associated ACE descs)
-                ACE_shape (int): Shape of ACE descs
+                                               the .npz file with key 'ACE' (with associated ACE descs).
+                ACE_shape (int): Shape of ACE descs.
         """
         if(self.isVerbose):
                 print("loading data")
@@ -51,18 +51,18 @@ class DensityPeakAdvancedClusteringACE:
 
     def cluster_dpa(self, maxk, Z, isVisualNeigh, saveDistName=None, loadDistName=None):
         """
-        Use DPA clustering method to find intrinsic dimension and predict clusters on ACE descs
+        Use DPA clustering method to find intrinsic dimension and predict clusters on ACE descs.
         
         Parameters:
-            maxk (int): Max neighbors in DPA
-            Z_in (float): Smoothing parameter in DPA
-            isVisualNeigh (bool): Visualize (or not) the number of neighbors for each ACE desc
-            saveDistName (str, optional): Path to save distances between ACE to
-            loadDistName (str, optional): Path to load saved distances between ACE from
+            maxk (int): Max neighbors in DPA.
+            Z_in (float): Smoothing parameter in DPA.
+            isVisualNeigh (bool): Visualize (or not) the number of neighbors for each ACE desc.
+            saveDistName (str, optional): Path to save distances between ACE to.
+            loadDistName (str, optional): Path to load saved distances between ACE from.
         
         Returns:
-                cluster_assignments (numpy.array[num ACE descs]): Cluster assigned to each ACE desc
-                cluster_assignments_halo (numpy.array[num ACE descs]): Cluster assigned to each ACE desc with halo imposed
+                cluster_assignments (numpy.ndarray[num ACE descs]): Cluster assigned to each ACE desc.
+                cluster_assignments_halo (numpy.ndarray[num ACE descs]): Cluster assigned to each ACE desc with halo imposed.
         """
 
         if(self.isVerbose):
