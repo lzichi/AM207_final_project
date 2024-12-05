@@ -62,7 +62,6 @@ class DensityPeakAdvancedClusteringACE:
         
         Returns:
                 cluster_assignments (numpy.ndarray[num ACE descs]): Cluster assigned to each ACE desc.
-                cluster_assignments_halo (numpy.ndarray[num ACE descs]): Cluster assigned to each ACE desc with halo imposed.
         """
 
         if(self.isVerbose):
