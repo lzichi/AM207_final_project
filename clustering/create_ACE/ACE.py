@@ -14,9 +14,9 @@ def create_ACE(file, store_file, rmax_in, nmax_in, lmax_in,
     Parameters:
         file (str): Path to the input atomic trajectory file.
         store_file (str): Path and base name for the output descriptor file.
-        rmax_in (float): Maximum cutoff radius for the ACE descriptor.
-        nmax_in (int): Number of radial basis functions for ACE.
-        lmax_in (int): Maximum angular momentum for ACE.
+        rmax_in (float): Maximum cutoff radius.
+        nmax_in (int): Highest order of radial basis functions.
+        lmax_in (int): Highest order of angular basis functions.
         range (int): Number of atomic environments to include in the descriptor slice.
         env (str): Label for the environment, used for annotation in the output file.
         frames_interval (int, optional): Interval for reading frames from the trajectory.
@@ -66,9 +66,9 @@ def ASSLMB(rmax_in, lmax_in, nmax_in):
     Run the ACE descriptor generation pipeline for predefined trajectory files.
 
     Parameters:
-        rmax_in (float): Maximum cutoff radius for the ACE descriptor.
-        lmax_in (int): Maximum angular momentum for ACE.
-        nmax_in (int): Number of radial basis functions for ACE.
+        rmax_in (float): Maximum cutoff radius.
+        nmax_in (int): Highest order of radial basis functions.
+        lmax_in (int): Highest order of angular basis functions.
     """
     # create ACE for every frame in 20 ns for 100 ps trajectory
     base_dir = "/n/netscratch/kozinsky_lab/Lab/lzichi/lzichi/projects/AM207_final_project/AM207_final_project/clustering/process_data"
