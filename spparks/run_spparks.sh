@@ -8,7 +8,9 @@
 #SBATCH -e logs/%x_%j.err       
 #SBATCH -o logs/%x_%j.out
 
-# example of spparks input file, only change is path to .in file for each run
+# example of spparks input file, only change is path to .in file 
+# and resources requested for each run 
+
 source ~/.bashrc
 
 micromamba activate /n/holystore01/LABS/kozinsky_lab/Lab/Software/SPPARKS_11_24/spparks_env
