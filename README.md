@@ -7,3 +7,4 @@ Organization of repository:
 - pyemma_msm: generate and validate MSMs 
 - spparks: creating spparks input scripts, parsing spparks output files, representative script for running spparks
 
+All output files from the codes are on FAS RC cluster which we can provide the paths to if needed but did not include in the GitHub for space reasons.
